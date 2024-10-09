@@ -1,0 +1,12 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: nginx-app
+spec:
+  components:
+    - name: nginx
+      type: webservice
+      properties:
+        image: nginx:latest
+        port: 80
+        replicas: 2
